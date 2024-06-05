@@ -2,7 +2,14 @@
 
 List of requirements:
 
-1.sfda
+1. Modify `/products` endpoint to allow search products.
+2. Implement `/orders/shipping-cost` endpoint:
+   1. Endpoint should receive all products in the cart
+   2. Endpoint should return total price of all products
+   3. Endpoint should return shipping cost:
+   - $15 for a total quantity equal to or lower than 5,
+   - $5 for total quantity of cart above 5 but lower then 10
+   - $0 for total quantity above 10.
 
 ## Dependencies
 
@@ -28,7 +35,3 @@ List of requirements:
 
 `docker-compose run workspace /bin/bash` - starts a new container and attaches to its bash.
 Starting new conainer with specified COMMAND will overwrite development image entrypoint.
-To run terraform command in container started that way first run script `./scripts/tf_login.sh` to create `.terraformrc` file with credentials.
-
-`docker-compose run workspace COMMAND` - starts a new container and runs a command in it. This command will overwrite development image entrypoint.
-It is not possible to run terraform commands that require login that way.

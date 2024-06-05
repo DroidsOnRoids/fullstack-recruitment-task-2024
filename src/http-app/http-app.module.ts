@@ -5,6 +5,7 @@ import { CustomHttpExceptionFilter, HttpExceptionFilter } from './filters';
 import { DomainErrorFilter } from './domain-error.filter';
 import { ProductsController } from './products/products.controller';
 import { RecruitmentTaskModule } from '../recruitment-task/recruitment-task.module';
+import { OrdersController } from './orders/orders.controller';
 
 @Module({
   imports: [RecruitmentTaskModule],
@@ -22,6 +23,6 @@ import { RecruitmentTaskModule } from '../recruitment-task/recruitment-task.modu
       useClass: DomainErrorFilter,
     },
   ],
-  controllers: [HealthCheckController, ProductsController],
+  controllers: [HealthCheckController, ProductsController, OrdersController],
 })
 export class HttpAppModule {}
