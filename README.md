@@ -19,7 +19,8 @@ List of requirements:
 
 - Copy default env variables from example file `cp .env.example .env`
 - Start project (`docker-compose up`)
-- Run migration `docker exec -it recruitment-task seed:products`
+- Run migration `docker exec -it recruitment-task yarn migration:up`
+- Generate seeds `docker exec -it recruitment-task yarn seed:products`
 
 ## Development docker image
 
